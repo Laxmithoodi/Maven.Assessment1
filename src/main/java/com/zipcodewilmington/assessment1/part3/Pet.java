@@ -9,7 +9,7 @@ public abstract class Pet implements Animal {
 
     private String name;
     private Integer age;
-   // private ArrayList<Pet> addPet;
+   private ArrayList<Pet> addPet;
 
 
 
@@ -21,6 +21,7 @@ public abstract class Pet implements Animal {
     public Pet(String name, Integer age) {
         this.name= name;
         this.age = age;
+        this.addPet = new ArrayList<>();
 
     }
 
