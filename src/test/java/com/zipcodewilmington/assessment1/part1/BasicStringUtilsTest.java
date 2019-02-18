@@ -18,6 +18,7 @@ public class BasicStringUtilsTest {
 
         // Then
         Assert.assertEquals(expected, actual);
+        System.out.println(actual);
     }
 
     @Test

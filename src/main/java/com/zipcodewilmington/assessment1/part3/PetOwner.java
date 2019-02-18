@@ -1,20 +1,31 @@
 package com.zipcodewilmington.assessment1.part3;
-
+import java.util.LinkedList;
+import java.util.ListIterator;
 /**
  * Created by leon on 2/16/18.
  */
 public class PetOwner {
+
+
+    private String name;
+
+    private LinkedList<Pet> petList = new LinkedList<>();
+
+
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
     public PetOwner(String name, Pet... pets) {
+        this.name= name;
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+
+        petList.add(pet);
     }
 
     /**
@@ -22,6 +33,7 @@ public class PetOwner {
      */
     public void removePet(Pet pet) {
 
+        petList.remove(pet);
     }
 
     /**
@@ -29,7 +41,8 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        return null;
+
+        return true;
     }
 
     /**
@@ -61,6 +74,7 @@ public class PetOwner {
      * @return the number of Pet objects stored in this class
      */
     public Integer getNumberOfPets() {
+
         return null;
     }
 
@@ -68,7 +82,8 @@ public class PetOwner {
      * @return the name property of the Pet
      */
     public String getName() {
-        return null;
+
+        return name;
     }
 
     /**
