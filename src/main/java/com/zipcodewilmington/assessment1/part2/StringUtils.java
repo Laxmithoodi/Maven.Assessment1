@@ -38,9 +38,7 @@ public class StringUtils {
      */
     public static String reverseFirstWord(String sentence) {
 
-       // String first = getFirstWord(sentence);
 
-       // StringBuilder sb = new StringBuilder(sentence.length() + 1);
         String words = getFirstWord(sentence);
         char[] in = words.toCharArray();
         int begin=0;
@@ -56,7 +54,9 @@ public class StringUtils {
         return new String(in);
 
 
-    }
+
+
+   }
 
     /**
      * @param sentence a string containing words delimited by spaces, representative of a sentence

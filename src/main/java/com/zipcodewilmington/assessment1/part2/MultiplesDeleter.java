@@ -1,5 +1,8 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -81,7 +84,7 @@ public class MultiplesDeleter {
 
         return outputArray1;
 
-
+       // return deleteMultiplesOfN(ints, 3);
 
     }
 
@@ -92,6 +95,12 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
+
+        //  List<Integer> list = new ArrayList<>();
+
+
+
+
         int n = ints.length;
 
         int counter = 0;
@@ -107,8 +116,8 @@ public class MultiplesDeleter {
 
 
         return outputArray1;
+//
 
-
-       // return null;
+      //  return null;
     }
 }

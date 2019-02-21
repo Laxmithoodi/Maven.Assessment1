@@ -7,11 +7,15 @@ public class Jumper {
      */
     public int jumps(int k, int j) {
 
-        if (k == k){
-            return k;
+
+        double r = (double)k/j;
+        double count = Math.ceil(r);
 
 
-        } else
-        return j+1;
+
+        return (int)count;
     }
 }
+
+
+

@@ -14,16 +14,15 @@ public class Cat extends Pet {
 
             super(name, age);
 
-        this.getName();
+        //this.getName();
+        //this.getAge();
     }
 
     /**
      * @param age age of this Cat
      */
     public Cat(Integer age) {
-        super(age);
-
-        this.getAge();
+        super("Cat name", age);
 
 
     }
@@ -32,10 +31,8 @@ public class Cat extends Pet {
      * @param name name of this Cat
      */
     public Cat(String name) {
-        super(name);
-        this.getAge();
-        this.getName();
 
+        super("Name of Cat", 0);
 
     }
 
@@ -47,9 +44,7 @@ public class Cat extends Pet {
      */
     public Cat() {
 
-        this.getName();
-        this.getOwner();
-        this.getAge();
+    super("Cat name" , 0);
 
     }
 
@@ -59,4 +54,21 @@ public class Cat extends Pet {
     public String speak() {
         return "Meow";
     }
+
+    /*//Delete below code if it is not working
+
+    public String getName() {
+
+        //return getName();
+        return "Cat name";
+    }
+
+
+    public Integer getAge() {
+
+        //return getAge();
+        return 0;
+        //return  Integer.MAX_VALUE;
+
+    }*/
 }

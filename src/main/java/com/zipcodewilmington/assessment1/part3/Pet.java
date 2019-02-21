@@ -8,20 +8,19 @@ import java.util.ArrayList;
 public abstract class Pet implements Animal {
 
     private String name;
-    private Integer age;
-   private ArrayList<Pet> addPet;
-
-
+    private int age;
+    private PetOwner owner;
 
 
     /**
      * nullary constructor
      * by default, pet has age of 0; name of "";
      */
-    public Pet(String name, Integer age) {
-        this.name= name;
-        this.age = age;
-        this.addPet = new ArrayList<>();
+    public Pet() {
+        this.name= "";
+        this.age = 0;
+
+
 
     }
 
@@ -51,8 +50,6 @@ public abstract class Pet implements Animal {
 
     }
 
-    protected Pet() {
-    }
 
     /**
      * @return name of this pet
@@ -60,14 +57,20 @@ public abstract class Pet implements Animal {
     public String getName() {
 
         return name;
+
     }
 
-    /**
-     * @return age of this pet
-     */
-    public Integer getAge() {
+    public void setAge(int age) {
+        this.age = age;
+     //   return age;
+
+    }
+
+    /***/
+    public int getAge() {
 
         return age;
+
     }
 
     /**
@@ -76,7 +79,7 @@ public abstract class Pet implements Animal {
      */
     public void setOwner(PetOwner newPetOwner) {
 
-
+     this.owner = newPetOwner;
 
     }
 
@@ -85,6 +88,6 @@ public abstract class Pet implements Animal {
      */
     public PetOwner getOwner() {
 
-        return null;
+        return owner;
     }
 }

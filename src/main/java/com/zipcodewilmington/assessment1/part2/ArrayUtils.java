@@ -1,4 +1,8 @@
 package com.zipcodewilmington.assessment1.part2;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.Arrays;
 import java.io.*;
@@ -33,17 +37,30 @@ public class ArrayUtils {
      * @return an array with identical content excluding the specified `objectToRemove`
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, turn an array of reobjects with identical contents excluding `objectToRemove`
      */
-    public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-
-
-       Object[]  array1 = ArrayUtils.removeValue(objectArray, objectToRemove);
-//
+    public static Integer[] removeValue(Integer[] objectArray, Integer objectToRemove) {
 
 
 
-
-        return array1;
+        if (objectArray == null) {
+            return null;
+        } else if (objectArray.length <= 0) {
+            return objectArray;
+        } else {
+            Integer[] output = new Integer[objectArray.length - 1];
+            int count = 0;
+            for (Integer i : objectArray) {
+                if (!i.equals(objectToRemove)) {
+                    output[count++] = i;
+                }
+            }
+            return output;
+        }
     }
+
+
+
+
+
 
     /**
      * @param objectArray an array of any type of Object
@@ -107,11 +124,12 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-      //  Object[] a3 = Arrays.copyOf(objectArray, objectArray.length + objectArrayToAdd.length);
-      //  StringBuilder sb = new StringBuilder();
 
 
-        return Stream.concat(Arrays.stream(objectArray), Arrays.stream(objectArrayToAdd))
-                .toArray(Integer[]::new);
+
+        return Stream
+                .concat(Stream.of(objectArray), Stream.of(objectArrayToAdd))
+                .collect(Collectors.toList())
+                .toArray(new Integer[0]);
     }
 }
