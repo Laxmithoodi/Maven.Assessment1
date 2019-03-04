@@ -9,8 +9,13 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-        String cap = str.substring(0, 1).toUpperCase() + str.substring(1);
-        return cap;
+       // String cap = str.substring(0, 1).toUpperCase() + str.substring(1);
+        char firstChar = str.charAt(0);
+        char upperCase = Character.toUpperCase(firstChar);
+
+        String tail = str.substring(1);
+
+        return upperCase+tail;
     }
 
     /**
@@ -18,20 +23,26 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        char[] in = str.toCharArray();
-        int begin=0;
-        int end=in.length-1;
-        char temp;
-        while(end>begin){
-            temp = in[begin];
-            in[begin]=in[end];
-            in[end] = temp;
-            end--;
-            begin++;
+
+        StringBuilder sb = new StringBuilder();
+       // return sb.reverse(str);
+        return null;
         }
 
-        return new String(in);
-    }
+//        char[] in = str.toCharArray();
+//        int begin=0;
+//        int end=in.length-1;
+//        char temp;
+//        while(end>begin){
+//            temp = in[begin];
+//            in[begin]=in[end];
+//            in[end] = temp;
+//            end--;
+//            begin++;
+//        }
+//
+//        return new String(in);
+
 
     /**
      * @param str string input from client
@@ -61,19 +72,33 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
-        StringBuilder sb = new StringBuilder(str.length());
 
-        for (char letter : str.toCharArray()) {
-            if (Character.isUpperCase(letter)) {
-                letter = Character.toLowerCase(letter);
-            } else if (Character.isLowerCase(letter)) {
-                letter = Character.toUpperCase(letter);
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+
+            if (Character.isLowerCase(c)) {
+                result += Character.toUpperCase(c);
+            } else {
+                result += Character.toLowerCase(c);
             }
-            sb.append(letter);
         }
 
-        String str2 = sb.toString();
-
-        return str2;
+            return result;
+        }
+//        StringBuilder sb = new StringBuilder(str.length());
+//
+//        for (char letter : str.toCharArray()) {
+//            if (Character.isUpperCase(letter)) {
+//                letter = Character.toLowerCase(letter);
+//            } else if (Character.isLowerCase(letter)) {
+//                letter = Character.toUpperCase(letter);
+//            }
+//            sb.append(letter);
+//        }
+//
+//        String str2 = sb.toString();
+//
+//        return str2;
     }
-}
+

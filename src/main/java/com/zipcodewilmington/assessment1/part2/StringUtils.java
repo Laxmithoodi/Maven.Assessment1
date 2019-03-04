@@ -11,12 +11,13 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
+        return sentence.split(" ");
 
-        String[] words = sentence.split("\\s+");
-        for (int i = 0; i < words.length; i++) {
-            words[i] = words[i].replaceAll("[^\\w]", "");
-        }
-        return words;
+//        String[] words = sentence.split("\\s+");
+//        for (int i = 0; i < words.length; i++) {
+//            words[i] = words[i].replaceAll("[^\\w]", "");
+//        }
+//        return words;
     }
 
 

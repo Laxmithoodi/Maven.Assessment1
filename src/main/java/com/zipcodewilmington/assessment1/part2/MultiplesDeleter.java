@@ -1,6 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -14,25 +15,33 @@ public class MultiplesDeleter {
      */
     public Integer[] deleteEvens(Integer[] ints) {
 
+        Integer[] result = new Integer[ints.length];
+        int resultindex =0;
+        for(Integer number : ints)
+            if(number %2 !=0){
+                result[resultindex] = number;
+                resultindex++;
+            }
+        return Arrays.copyOf(result, resultindex);
 
-        int n = ints.length;
-
-        int counter = 0;
-        for (int i = 0; i < n; i++)
-            if (ints[i] % 2 == 1)
-                ints[counter++] = ints[i];
-        for (int i = counter; i < n; i++)
-            ints[i] = 0;
-
-        Integer[] outputArray = new Integer[counter];
-        for (int i = 0; i < counter; i++)
-            outputArray[i] = ints[i];
-
-
-        return outputArray;
-
-
-        //return null;
+//        int n = ints.length;
+//
+//        int counter = 0;
+//        for (int i = 0; i < n; i++)
+//            if (ints[i] % 2 == 1)
+//                ints[counter++] = ints[i];
+//        for (int i = counter; i < n; i++)
+//            ints[i] = 0;
+//
+//        Integer[] outputArray = new Integer[counter];
+//        for (int i = 0; i < counter; i++)
+//            outputArray[i] = ints[i];
+//
+//
+//        return outputArray;
+//
+//
+//        //return null;
     }
 
     /**

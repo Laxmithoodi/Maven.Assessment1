@@ -8,7 +8,8 @@ import java.util.ArrayList;
 public abstract class Pet implements Animal {
 
     private String name;
-    private int age;
+    private Integer age;
+   // private int age;
     private PetOwner owner;
 
 
@@ -28,7 +29,9 @@ public abstract class Pet implements Animal {
      * @param name name of this pet
      */
     public Pet(String name) {
+
         this.name= name;
+        this.age=0;
     }
 
 
@@ -38,6 +41,7 @@ public abstract class Pet implements Animal {
     public Pet(int age) {
 
         this.age = age;
+        this.name="";
     }
 
     /**

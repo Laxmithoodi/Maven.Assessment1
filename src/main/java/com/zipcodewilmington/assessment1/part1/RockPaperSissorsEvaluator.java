@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part1;
 
+import com.zipcodewilmington.assessment1.part3.PetOwner;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -14,10 +16,17 @@ public class RockPaperSissorsEvaluator {
      */
     public String getWinningMove(String handSign) {
 
+        if (ROCK.equals(handSign)) {
+            return PAPER;
+        } else if (PAPER.equals(handSign)){
+            return SCISSOR;
+    }else return ROCK;
 
-
-        return PAPER;
-
+//        if (handSign == ROCK || handSign == PAPER)
+//            return PAPER;
+//        else
+//
+//            return ROCK;
 
 
     }
@@ -28,8 +37,12 @@ public class RockPaperSissorsEvaluator {
      */
     public String getLosingMove(String handSign) {
 
+        if (handSign == PAPER || handSign == SCISSOR)
+            return PAPER;
+        else
 
-        return SCISSOR;
+            return SCISSOR;
+
     }
 
     /**
@@ -39,10 +52,43 @@ public class RockPaperSissorsEvaluator {
      */
     public String getWinner(String handSignOfPlayer1, String handSignOfPlayer2) {
 
-
-
-
-            return null;
+        if(handSignOfPlayer1.equals(handSignOfPlayer2)){
+            return "draw";
+        }
+        else if
+        (getWinningMove(handSignOfPlayer1).equals(handSignOfPlayer2)) {
+            return
+                    handSignOfPlayer2;
+        }else {
+            return handSignOfPlayer1;
         }
 
     }
+
+
+//        String winner = "";
+//
+//        if (handSignOfPlayer1.equals(ROCK) && handSignOfPlayer2.equals(PAPER)) {
+//            winner =handSignOfPlayer1;
+//        } else if (handSignOfPlayer1.equals(ROCK) && handSignOfPlayer2.equals(SCISSOR)) {
+//            winner = handSignOfPlayer1;
+//
+//        } else if (handSignOfPlayer1.equals(PAPER) && handSignOfPlayer2.equals(SCISSOR)) {
+//            winner = handSignOfPlayer2;
+//        }
+//
+//            return winner;
+//    }
+
+}
+
+
+//
+//        if(handSignOfPlayer1 ==ROCK || handSignOfPlayer2 == PAPER)
+//
+//=
+//            return ROCK;
+//        else
+//            return PAPER;
+
+

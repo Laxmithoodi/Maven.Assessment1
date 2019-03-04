@@ -8,12 +8,11 @@ public class Jumper {
     public int jumps(int k, int j) {
 
 
-        double r = (double)k/j;
-        double count = Math.ceil(r);
+        int result = k%j+k/j;
 
 
 
-        return (int)count;
+        return result;
     }
 }
 

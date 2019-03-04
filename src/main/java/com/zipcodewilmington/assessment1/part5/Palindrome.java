@@ -24,34 +24,3 @@ public class Palindrome {
         return 1;
     }
 }
-
-
-//
-//        int globalCount = input.length();
-//        for (int mid = 1; mid < input.length() - 1; mid++) {
-//            int count = 0;
-//
-//            int low = mid - 1;
-//            int high = mid + 1;
-//            while (low >= 0 && high < input.length() && input.charAt(low--) == input.charAt(high++))
-//                count++;
-//
-//            globalCount += count;
-//            count = 0;
-//
-//
-//
-//
-//            low = mid - 1;
-//            high = mid;
-//            while (low >= 0 && high < input.length() && input.charAt(low--) == input.charAt(high++))
-//                count++;
-//
-//            globalCount += count;
-//
-//
-//        }
-//
-//        return globalCount;
-//    }
-//}

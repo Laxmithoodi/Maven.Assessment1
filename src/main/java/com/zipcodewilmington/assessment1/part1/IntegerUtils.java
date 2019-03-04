@@ -25,12 +25,6 @@ public class IntegerUtils {
      * @return the product of all integers between 0 and not including `n`
      */
     public static Integer getProductOfN(Integer n) {
-//        int rtn=1;
-//        for (int i = 0; i <= n; i++) {
-//
-//            rtn *= i;
-//        }
-//        return rtn;
 
         int product = 1;
         for(int number = 1; number <= n; number++){
@@ -45,11 +39,16 @@ public class IntegerUtils {
      * @return integer with identical digits in the reverse order
      */
     public static Integer reverseDigits(Integer val) {
-        String number = Integer.toString(val);
-        String output = "";
-        for (int i = number.length() - 1; i >= 0; i--)
-            output += number.charAt(i);
-        return Integer.parseInt(output);
+
+        String number = val.toString();
+        String reversed = BasicStringUtils.reverse(number);
+        return Integer.parseInt(reversed);
+
+//        String number = Integer.toString(val);
+//        String output = "";
+//        for (int i = number.length() - 1; i >= 0; i--)
+//            output += number.charAt(i);
+//        return Integer.parseInt(output);
 
     }
     }
